@@ -6,17 +6,17 @@ class script(object):
 ★ ʟᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>ᴘʏᴛʜᴏɴ</a>
 ★ ʟɪʙʀᴀʀʏ: <a href=https://pyrogram.org>ᴘʏʀᴏɢʀᴀᴍ</a>"""
 
-    MY_OWNER_TXT = """★ ɴᴀᴍᴇ: Hansaka Anuhas
-★ Username: @BotGeniusProbot
+    MY_OWNER_TXT = """★ ɴᴀᴍᴇ: 👉<spoiler> {mention} </spoiler> 
+★ ᴜꜱᴇʀɴᴀᴍᴇ: @BotGeniusProbot
 ★ ᴄᴏɴᴛᴀᴄᴛ: <a href=https://t.me/BotGeniusProbot>ᴀᴅᴍɪɴ</a>
-★ Country: ɪɴᴅɪᴀ 🇮🇳"""
+★ ᴄᴏᴜɴᴛʀʏ: ɪɴᴅɪᴀ 🇮🇳"""
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>
-👤 Total Users: <code>{}</code>
-👥 Total Chats: <code>{}</code>
-✨ Used Storage: <code>{}</code>
-⚡️ Free Storage: <code>{}</code>
-🚀 Uptime: <code>{}</code>"""
+👤 ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code>
+👥 ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code>{}</code>
+✨ ᴜꜱᴇᴅ ꜱᴛᴏʀᴀɢᴇ: <code>{}</code>
+⚡️ ꜰʀᴇᴇ ꜱᴛᴏʀᴀɢᴇ: <code>{}</code>
+🚀 ᴜᴘᴛɪᴍᴇ: <code>{}</code>"""
 
     NEW_GROUP_TXT = """#NewGroup
 ★ Title: {}
@@ -42,11 +42,11 @@ class script(object):
 
     NOT_FILE_TXT = """👋 Hello {},
 
-I can't find the <b>{}</b> in my database! 🥲
+​🇮​ ​🇨​​🇦​​🇳​❜​🇹​ ​🇫​​🇮​​🇳​​🇩​ ​🇹​​🇭​​🇪​ <b>{}</b> 🇮​​🇳​ ​🇲​​🇾​ ​🇩​​🇦​​🇹​​🇦​​🇧​​🇦​​🇸​​🇪​ 🥲
 
-👉 Google Search and check your spelling is correct.
-👉 Please read the Instructions to get better results.
-👉 Or not been released yet."""
+👉 ɢᴏᴏɢʟᴇ ꜱᴇᴀʀᴄʜ ᴀɴᴅ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ ɪꜱ ᴄᴏʀʀᴇᴄᴛ.
+👉 ᴘʟᴇᴀꜱᴇ ʀᴇᴀᴅ ᴛʜᴇ ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ ᴛᴏ ɢᴇᴛ ʙᴇᴛᴛᴇʀ ʀᴇꜱᴜʟᴛꜱ.
+👉 ᴏʀ ɴᴏᴛ ʙᴇᴇɴ ʀᴇʟᴇᴀꜱᴇᴅ ʏᴇᴛ."""
     
     EARN_TXT = """<b>ʜᴏᴡ ᴛᴏ ᴇᴀʀɴ ꜰʀᴏᴍ ᴛʜɪs ʙᴏᴛ
 
@@ -78,15 +78,15 @@ I can't find the <b>{}</b> in my database! 🥲
 
     IMDB_TEMPLATE = """✅ I Found: <code>{query}</code>
 
-🏷 Title: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating} / 10</a>
-☀️ Languages: {languages}
-📀 RunTime: {runtime} Minutes
+🏷 ᴛɪᴛʟᴇ: <a href={url}>{title}</a>
+🎭 ɢᴇɴʀᴇꜱ: {genres}
+📆 ʏᴇᴀʀ: <a href={url}/releaseinfo>{year}</a>
+🌟 ʀᴀᴛɪɴɢ: <a href={url}/ratings>{rating} / 10</a>
+☀️ ʟᴀɴɢᴜᴀɢᴇꜱ: {languages}
+📀 ʀᴜɴᴛɪᴍᴇ: {runtime} Minutes
 
-🗣 Requested by: {message.from_user.mention}
-©️ Powered by: <b>{message.chat.title}</b>"""
+🗣 ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ: {message.from_user.mention}
+©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <b>{message.chat.title}</b>"""
 
     FILE_CAPTION = """<i>{file_name}</i>
 
