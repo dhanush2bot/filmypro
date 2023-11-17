@@ -6,7 +6,7 @@ class script(object):
 ★ ʟᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>ᴘʏᴛʜᴏɴ</a>
 ★ ʟɪʙʀᴀʀʏ: <a href=https://pyrogram.org>ᴘʏʀᴏɢʀᴀᴍ</a>"""
 
-    MY_OWNER_TXT = """★ ɴᴀᴍᴇ: 👉<spoiler> {mention} </spoiler> 
+    MY_OWNER_TXT = """★ ɴᴀᴍᴇ:👉  <spoiler> {mention} </spoiler> 
 ★ ᴜꜱᴇʀɴᴀᴍᴇ: @BotGeniusProbot
 ★ ᴄᴏɴᴛᴀᴄᴛ: <a href=https://t.me/BotGeniusProbot>ᴀᴅᴍɪɴ</a>
 ★ ᴄᴏᴜɴᴛʀʏ: ɪɴᴅɪᴀ 🇮🇳"""
