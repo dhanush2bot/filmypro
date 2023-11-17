@@ -15,7 +15,7 @@ async def welcome(bot, message: ChatMemberUpdated):
         if message.new_chat_member.user.id == temp.ME:
             buttons = [[
                 InlineKeyboardButton('Updates Channel', url=UPDATES_LINK),
-                InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+                InlineKeyboardButton('Movie Channel', url=SUPPORT_LINK)
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             user = message.from_user.mention if message.from_user else "Dear"
@@ -57,7 +57,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+            InlineKeyboardButton('Movie Channel', url=SUPPORT_LINK)
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -96,7 +96,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat successfully disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+            InlineKeyboardButton('Movie Channel', url=SUPPORT_LINK)
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
