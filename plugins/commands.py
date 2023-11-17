@@ -32,7 +32,7 @@ async def start(client, message):
         wish = get_wish()
         btn = [[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
         ]]
         await message.reply(text=f"<b>ʜᴇʏ {message.from_user.mention}, <i>{wish}</i>\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>", reply_markup=InlineKeyboardMarkup(btn))
         return 
@@ -52,7 +52,7 @@ async def start(client, message):
             InlineKeyboardButton('🔎 sᴇᴀʀᴄʜ ɪɴʟɪɴᴇ 🔍', switch_inline_query_current_chat='')
         ],[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton(' 📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
         ],[
             InlineKeyboardButton('👨‍🚒 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('📚 ᴀʙᴏᴜᴛ', callback_data='my_about'),
@@ -83,7 +83,7 @@ async def start(client, message):
                 )
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=f"👋 Hello {message.from_user.mention},\n\nPlease join my 'Updates Channel' and request again. 😇",
+            caption=f"👋 Hello {message.from_user.mention},\n\n​🇵​​🇱​​🇪​​🇦​​🇸​​🇪​ ​🇯​​🇴​​🇮​​🇳​ ​🇲​​🇾​ ❜​🇺​​🇵​​🇩​​🇦​​🇹​​🇪​​🇸​ ​🇨​​🇭​​🇦​​🇳​​🇳​​🇪​​🇱​❜ ​🇦​​🇳​​🇩​ ​🇷​​🇪​​🇶​​🇺​​🇪​​🇸​​🇹​ ​🇦​​🇬​​🇦​​🇮​​🇳​. 😇",
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
@@ -101,7 +101,7 @@ async def start(client, message):
                 InlineKeyboardButton("📌 Get File 📌", url=f'https://t.me/{temp.U_NAME}?start={verify_status["link"]}')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-        await message.reply(f"✅ You successfully verified until: {get_readable_time(VERIFY_EXPIRE)}", reply_markup=reply_markup, protect_content=True)
+        await message.reply(f"✅ ​🇾​​🇴​​🇺​ ​🇸​​🇺​​🇨​​🇨​​🇪​​🇸​​🇸​​🇫​​🇺​​🇱​​🇱​​🇾​ ​🇻​​🇪​​🇷​​🇮​​🇫​​🇮​​🇪​​🇩​ ​🇺​​🇳​​🇹​​🇮​​🇱​: {get_readable_time(VERIFY_EXPIRE)}", reply_markup=reply_markup, protect_content=True)
         return
     
     verify_status = await get_verify_status(message.from_user.id)
@@ -114,7 +114,7 @@ async def start(client, message):
         ],[
             InlineKeyboardButton('🗳 Tutorial 🗳', url=TUTORIAL)
         ]]
-        await message.reply("You not verified today! Kindly verify now. 🔐", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
+        await message.reply("​🇾​​🇴​​🇺​ ​🇳​​🇴​​🇹​ ​🇻​​🇪​​🇷​​🇮​​🇫​​🇮​​🇪​​🇩​ ​🇹​​🇴​​🇩​​🇦​​🇾​❗ ​🇰​​🇮​​🇳​​🇩​​🇱​​🇾​ ​🇻​​🇪​​🇷​​🇮​​🇫​​🇾​ ​🇳​​🇴​​🇼​. 🔐", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
         return
  
     if mc.startswith('all'):
@@ -134,7 +134,7 @@ async def start(client, message):
                 InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file.file_id}")
             ],[
                 InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-                InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+                InlineKeyboardButton('📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
             ],[
                 InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
             ]]
@@ -163,7 +163,7 @@ async def start(client, message):
         InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file_id}")
     ],[
         InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-        InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+        InlineKeyboardButton('📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
     ],[
         InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
     ]]
@@ -345,7 +345,7 @@ async def save_shortlink(client, message):
     try:
         _, url, api = message.text.split(" ", 2)
     except:
-        return await message.reply_text("<b>Command Incomplete:-\n\ngive me a shortlink & api along with the command...\n\nEx:- <code>/shortlink mdisklink.link 5843c3cc645f5077b2200a2c77e0344879880b3e</code>")
+        return await message.reply_text("<b>Command Incomplete:-\n\ngive me a shortlink & api along with the command...\n\nEx:- <code>/shortlink shareus.io 0ft2s2mKCHOaLUKDZCcnDXCt8O63</code>")
     
     try:
         shortzy = Shortzy(api_key=api, base_site=url)
