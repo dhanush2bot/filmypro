@@ -136,8 +136,7 @@ I can't find the <b>{}</b> in my database! 🥲
 - 
 ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀ ᴘʀɪᴠᴀᴛᴇ ᴘʀᴏᴊᴇᴄᴛ.
 
-- ꜱᴏᴜʀᴄᴇ - <a href=https://github.com/HansakaAnuhas-TG/AutoFilterBot-Beta>ʜᴇʀᴇ</a>
+- ꜱᴏᴜʀᴄᴇ - <a href=https://t.me/BotGeniusProbot>ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ📞</a>
 
-ᴅᴇᴠʟᴏᴘᴇʀ -
-<a href=https://telegram.me/Hansaka_Anuhas>ʜᴀɴsᴀᴋᴀ</a>
-<a href=https://telegram.me/Technicalaks123>ᴀᴋs</a></b>"""
+ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ -
+<a href=https://t.me/filmyspotupdate>ꜰɪʟᴍʏꜱᴘᴏᴛ ᴜᴘᴅᴀᴛᴇ </a></b>"""
