@@ -98,6 +98,6 @@ async def answer(bot, query):
 def get_reply_markup():
     buttons = [[
         InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-        InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+        InlineKeyboardButton('📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
     ]]
     return InlineKeyboardMarkup(buttons)
