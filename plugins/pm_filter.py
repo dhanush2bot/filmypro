@@ -51,7 +51,7 @@ async def give_filter(client, message):
             files, offset, total = await get_search_results(message.text, offset=0, filter=True)
             if files:
                 btn = [[
-                    InlineKeyboardButton("Here", url='https://t.me/SL_Films_World')
+                    InlineKeyboardButton("Here", url='https://t.me/filmyspot0')
                 ]]
                 await message.reply_text(f'Total {total} results found in this group', reply_markup=InlineKeyboardMarkup(btn))
             return
@@ -158,7 +158,7 @@ async def pm_search(client, message):
     files, n_offset, total = await get_search_results(message.text, filter=True)
     if int(total) != 0:
         btn = [[
-            InlineKeyboardButton("Here", url='https://t.me/SL_Films_World')
+            InlineKeyboardButton("Here", url='https://t.me/filmyspot0')
         ]]
         await message.reply_text(f'Total {total} results found in this group', reply_markup=InlineKeyboardMarkup(btn))
 
@@ -265,7 +265,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     if int(req) != query.from_user.id:
         return await query.answer(f"Hello {query.from_user.first_name},\nDon't Click Other Results!", show_alert=True)
 
-    langs = ['english', 'tamil', 'hindi', 'malayalam', 'telugu']
+    langs = ['english', 'tamil', 'hindi', 'malayalam', 'kannada', 'telugu']
     btn = [
         [
             InlineKeyboardButton(
@@ -529,7 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔎 sᴇᴀʀᴄʜ ɪɴʟɪɴᴇ 🔍', switch_inline_query_current_chat='')
         ],[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('📽️ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 📽️', url=SUPPORT_LINK)
         ],[
             InlineKeyboardButton('👨‍🚒 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('📚 ᴀʙᴏᴜᴛ', callback_data='my_about'),
@@ -577,7 +577,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "my_owner":
         buttons = [[
             InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('☎️ ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/Hansaka_Anuhas')
+            InlineKeyboardButton('☎️ ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/BotGeniusProbot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
