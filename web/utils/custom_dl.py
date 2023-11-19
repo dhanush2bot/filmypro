@@ -208,7 +208,7 @@ class TGCustomYield:
 
         if isinstance(r, raw.types.upload.File):
             m_file = []
-            # m_file.name = file_name
+            m_file.name = data.file_name  # Set the name if available
             while True:
                 chunk = r.bytes
 
