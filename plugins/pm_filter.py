@@ -135,11 +135,7 @@ async def give_filter(client, message):
             btn = [[
                 InlineKeyboardButton("✅𝘾𝙇𝙄𝘾𝙆 𝙏𝙊 𝙑𝙀𝙍𝙄𝙁𝙔✅", url=f'https://t.me/{temp.U_NAME}?start=inline_verify')
             ]]
-            k = await message.reply(f"🙅‍♂️ Oh no! It seems like I forgot to verify today! 🤦‍♂️
-🌟 But fear not! Let's fix this right away! ✨
-🔐 Please VERIFY to unlock the magical world of DIRECT MOVIES for the next 24 hours! 🎬🍿
-🚀 Get ready for an epic cinematic adventure! 🌌
-👉 Just one click away from unlimited movie joy! 🎉🎞️", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
+            k = await message.reply(f"🙅‍♂️ Oh no! It seems like I forgot to verify", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
             await asyncio.sleep(300)
             await k.delete()
             try:
