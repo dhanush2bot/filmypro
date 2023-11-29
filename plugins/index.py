@@ -32,8 +32,8 @@ async def index_files(bot, query):
 @Client.on_message(filters.command('index') & filters.private & filters.incoming & filters.user(ADMINS))
 async def send_for_index(bot, message):
     if lock.locked():
-        return await message.reply('Wait until previous process complete.')
-    i = await message.reply("Forward last message or send last message link.")
+        return await message.reply('Wait until the previous process completes.')
+    i = await message.reply("Forward the last message or send the last message link.")
     msg = await bot.listen(message.from_user.id)
     await i.delete()
     if msg.text and msg.text.startswith("https://t.me"):
@@ -50,7 +50,7 @@ async def send_for_index(bot, message):
         last_msg_id = msg.forward_from_message_id
         chat_id = msg.forward_from_chat.username or msg.forward_from_chat.id
     else:
-        await message.reply('This is not forwarded message or link.')
+        await message.reply('This is not a forwarded message or link.')
         return
     try:
         chat = await bot.get_chat(chat_id)
@@ -61,7 +61,7 @@ async def send_for_index(bot, message):
     if chat.type != enums.ChatType.CHANNEL:
         return await message.reply("I can index only channels.")
 
-    s = await message.reply("Send skip message number.")
+    s = await message.reply("Send the skip message number.")
     msg = await bot.listen(message.from_user.id)
     await s.delete()
     try:
@@ -131,4 +131,4 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot, skip):
             logger.exception(e)
             await msg.reply(f'Index canceled due to Error: {e}')
         else:
-            await msg.edit(f'Succesfully saved <code>{total_files}</code> to Database!\nCompleted in {time_taken}\n\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>\nUnsupported Media: <code>{unsupported}</code>\nErrors Occurred: <code>{errors}</code>')
+            await msg.edit(f'Successfully saved <code>{total_files}</code> to Database!\nCompleted in {time_taken}\n\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>\nUnsupported Media: <code>{unsupported}</code>\nErrors Occurred: <code>{errors}</code>')
