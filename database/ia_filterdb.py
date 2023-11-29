@@ -12,7 +12,6 @@ from info import DATABASE_URL, DATABASE_NAME, COLLECTION_NAME
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-
 client = AsyncIOMotorClient(DATABASE_URL)
 db = client[DATABASE_NAME]
 instance = Instance.from_db(db)
@@ -23,12 +22,14 @@ class Media(Document):
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
     caption = fields.StrField(allow_none=True)
+    user_id = fields.IntField()  # Added field for user_id
+    premium = fields.BoolField(default=False)  # Added field for premium status
 
     class Meta:
         indexes = ('$file_name', )
         collection_name = COLLECTION_NAME
 
-async def save_file(media):
+async def save_file(media, user_id, premium=False):
     """Save file in database"""
 
     # TODO: Find better way to get same file_id for same media to avoid duplicates
@@ -40,7 +41,9 @@ async def save_file(media):
             file_id=file_id,
             file_name=file_name,
             file_size=media.file_size,
-            caption=file_caption
+            caption=file_caption,
+            user_id=user_id,
+            premium=premium
         )
     except ValidationError:
         logger.exception('Error occurred while saving file in database')
@@ -55,7 +58,7 @@ async def save_file(media):
             logger.info(f'{file_name} is saved to database')
             return 'suc'
 
-async def get_search_results(query, max_results=10, offset=0, filter=False, lang=None):
+async def get_search_results(query, user_id, max_results=10, offset=0, filter=False, lang=None):
     query = query.strip()
     if not query:
         raw_pattern = '.'
@@ -67,7 +70,14 @@ async def get_search_results(query, max_results=10, offset=0, filter=False, lang
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
         return None, None, None
-    filter = {'file_name': regex}
+
+    # Update filter to include user_id only for premium users
+    filter = {'file_name': regex, 'user_id': user_id}
+    
+    # Consider premium status only for premium users
+    if premium:
+        filter['premium'] = True
+    
     cursor = Media.find(filter)
 
     # Sort by recent
@@ -92,7 +102,7 @@ async def get_search_results(query, max_results=10, offset=0, filter=False, lang
         next_offset = ''       
     return files, next_offset, total_results
     
-async def delete_files(query, filter=True):
+async def delete_files(query, user_id, filter=True):
     query = query.strip()
     # for better results
     if filter:
@@ -109,13 +119,15 @@ async def delete_files(query, filter=True):
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
         return None, None
-    filter = {'file_name': regex}
+
+    # Update filter to include user_id
+    filter = {'file_name': regex, 'user_id': user_id}
     total = await Media.count_documents(filter)
     files = Media.find(filter)
     return total, files
 
-async def get_file_details(query):
-    filter = {'file_id': query}
+async def get_file_details(query, user_id):
+    filter = {'file_id': query, 'user_id': user_id}
     cursor = Media.find(filter)
     filedetails = await cursor.to_list(length=1)
     return filedetails
